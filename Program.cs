@@ -17,8 +17,14 @@ namespace CheckString
             Console.WriteLine("Anna joku merkkijono, jota verrataan edelliseen merkkijonoon");
             lause2 = Console.ReadLine();
 
+            //if (lause2 == string.Empty)
+                if (lause2 == "")
+                { 
+                    Console.WriteLine("joootain");
+                                 }
+
             //IndexOf() palauttaa (-1)tai(0),jos merkkijonoa ei löydy
-            if ((lause1.IndexOf(lause2) == -1) || (lause1.IndexOf(lause2)==0))
+            if (lause1.IndexOf(lause2) == -1)
             { Console.WriteLine("Merkkijonoa ei lötynyt"); }
 
             else Console.WriteLine("Merkkijono löytyi");//jos palauttaa jotain muuta merkkijono löytyi
