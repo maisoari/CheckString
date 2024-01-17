@@ -12,31 +12,27 @@ namespace CheckString
         {
             string lause1, lause2;
 
+            Console.WriteLine("Verrataan sisältyykö toinen merkkijono ensimmäiseen merkkijonoon");
             Console.WriteLine("Anna joku merkkijono (esim. joku lause)");
-            lause1 = Console.ReadLine();
-            Console.WriteLine("Anna joku merkkijono, jota verrataan edelliseen merkkijonoon");
-            lause2 = Console.ReadLine();
+            lause1 = Console.ReadLine();        //talletetaan annettu mrkjono muutujaan (lause1)
+            Console.WriteLine("Anna joku toinen merkkijono, jota verrataan edelliseen merkkijonoon");
+            lause2 = Console.ReadLine();       //talletetaan annettu mrkjono muutujaan (lause2)
 
-            //if (lause2 == string.Empty)
-                if (lause2 == "")
-                { 
-                    Console.WriteLine("joootain");
-                                 }
+            if (lause2 == "")    //Tarkistetaan onko merkkijono tyhjä (lause2 == string.Empty)
+            { 
+              Console.WriteLine("Toinen merkkijono puuttuu!");
+            }
 
-            //IndexOf() palauttaa (-1)tai(0),jos merkkijonoa ei löydy
-            if (lause1.IndexOf(lause2) == -1)
-            { Console.WriteLine("Merkkijonoa ei lötynyt"); }
+                 
+            if (lause1.IndexOf(lause2) == -1)   //IndexOf() palauttaa (-1),jos merkkijonoa ei löydy
+            Console.WriteLine("Merkkijonoa ei lötynyt");
 
-            else Console.WriteLine("Merkkijono löytyi");//jos palauttaa jotain muuta merkkijono löytyi
-
-
-            Console.WriteLine(lause1.IndexOf(lause2));
-
-
-            //Console.WriteLine(lause2);
-            Console.WriteLine();
-                      
-            
+               
+             else if (lause2 != "")           //jos palauttaa jotain muuta ja mrkjono ei ole tyhjä, merkkijono löytyi
+             Console.WriteLine("Merkkijono löytyi");   
+                       
+            Console.WriteLine("Yes!");
+                                 
             Console.ReadLine();
 
 
